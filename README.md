@@ -2,11 +2,13 @@
 ## Multiple MONGODB DATABASE and WEBSOCKET
 #### Task'ın amacı.
 İki tane farklı MongoDB adreslerine bağlanarak bir form yapısı kurmanız gerekiyor.
+
 **Birinci DB**
 
 ```ssh 
 mongodb+srv://nodejs:nodejsdatapass@db1.ewt09.mongodb.net/?retryWrites=true&w=majority
 ```
+
 **İkinci DB**
 
 ```ssh 
@@ -40,6 +42,9 @@ Bu fieldlardan oluşturduğunuz HTML form'u kayıt ettikten sonra, **İkinci DB*
 !Lütfen örnekteki coinleri yükleyiniz.
 
  [Binance](https://github.com/binance/binance-spot-api-docs/blob/master/web-socket-streams.md) - WEB SOCKET APISI
+ 
 Yukarıda oluşturulan tabloya anlık fiyat bilgilerini WEB SOCKET API dan çekmenizi ve güncellemenizi istiyoruz.
+
 websocketi dinlemek için HTML/JS kullanabilirsiniz. Socket.io kütüphanesi gibi diğer kütüphanelerde kullanılabilir.
+
 websocketi nodejs,python gibi backend tarafında da dinleyebilirsiniz.
