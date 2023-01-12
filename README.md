@@ -1,6 +1,9 @@
 # Task
+
 ## Multiple MONGODB DATABASE and WEBSOCKET
+
 #### Task'ın amacı.
+
 İki tane farklı MongoDB adreslerine bağlanarak bir form yapısı kurmanız gerekiyor.
 
 **Birinci DB**
@@ -38,6 +41,7 @@ Aşağıdaki form yapısında ise  **İkinci DB** üzerinde istediğimiz fieldla
 | Bitcoin | BTCUSDT  | 17,252.28 | BUY veya SELL |
 | Ethereum | ETHUSDT  | 1,327.88 | BUY veya SELL |
 
+
 !Lütfen örnekteki coinleri yükleyiniz.
 
  [Binance](https://github.com/binance/binance-spot-api-docs/blob/master/web-socket-streams.md) - WEB SOCKET APISI
@@ -53,21 +57,25 @@ BUY veya SELL buttonuna basıldığında  **Birinci DB** üzerinde sizden istedi
 - Exit Price
 - Quantity
 - Position (LONG||SHORT)
-- PNL
+- PNLUSDT
+- PNLPERCENT
 - Profit
 
 Yukarıdaki fieldları **Birinci DB**  adresine **positions** collectionın içine yüklemenizi istiyoruz.
 Daha sonra HTML formatında yapacağınız table list ile elemanlarını yukarıdaki fieldlara göre oluşturduktan sonra, bu collectionı listeyecek bir function istiyoruz. (HTML olarak)
 
-| pair | buy_price | sell_price | qty | position | pnl | profit
-| ------ | ------ | ------ | ------ | ------ | ------ | ------ |
-| Bitcoin | 17,252.28  | 18,252.28 | 1 | LONG| 1% | true
-| Ethereum | 1,527.88  | 1,327.88 | 2 | LONG | -1% | false
+
+| pair |entry_price | exit_price | qty | position |pnl_usdt | pnl_percent | profit
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| BTCUSDT | 17,252.28  | 18,252.28 | 1 | LONG| 1000 | 5.80% | true
+| ETHUSDT | 1,527.88  | 1,327.88 | 1 | LONG | -200 | -13.09% | false
+| XRPUSDT | 0.3705  | 0.30 | 250 | SHORT | 17.63 | 19.03% | true
+
 
 ```js
 position = position == LONG ? 1 : -1;
 ```
 
-```ssh
-PNL: ((Exit Price - Entry Price) * Qty) * position
+```js
+PNLUSDT: ((Exit Price - Entry Price) * Qty) * position 
 ```
