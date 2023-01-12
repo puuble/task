@@ -26,11 +26,9 @@ Projede gerekli sayfalar:
 
 Satmak veya almak istediğimiz coinleri **İkinci DB** üzerine kayıt etmek için aşağıdaki fieldlar ile oluşturulmuş bir form ve formdaki kayıtları listeyebileceğimiz HTML table. Bu HTML table da price alanı anlık WS üzerinden güncellenecektir. MARKET SYMBOL'leri veriyi çekmeniz için önemlidir.
 
-Aşağıdaki form yapısında ise  **İkinci DB** üzerinde istediğimiz fieldlar yer almaktadır. **İkinci DB** adresine **positions** collectionına oluşturmanızı istiyoruz.
-
 Bu fieldlar BUY veya SELL buttonlarına bastığımızda o anki fiyat ve diğer bilgiler ile **Birinci DB**'ye kayıt edilecek şekilde, **İkinci DB** 'de yer alan fieldları bir tablo içerisinde listelemenizi istiyoruz. Aşağıdaki fieldlar ile bir HTML form oluşturmanız ve aşağıdaki fieldları bu HTML form sayesinde eklemeniz gerekiyor.
 
-
+Aşağıdaki form yapısında ise  **İkinci DB** üzerinde istediğimiz fieldlar yer almaktadır. **İkinci DB** adresine **symbols** collectionına oluşturmanızı istiyoruz.
 
 - Pair
 - Market Symbol
@@ -58,11 +56,18 @@ BUY veya SELL buttonuna basıldığında  **Birinci DB** üzerinde sizden istedi
 - PNL
 - Profit
 
-Yukarıdaki fieldları **Birinci DB**  adresine **histories** collectionın içine yüklemenizi istiyoruz.
+Yukarıdaki fieldları **Birinci DB**  adresine **positions** collectionın içine yüklemenizi istiyoruz.
 Daha sonra HTML formatında yapacağınız table list ile elemanlarını yukarıdaki fieldlara göre oluşturduktan sonra, bu collectionı listeyecek bir function istiyoruz. (HTML olarak)
 
-| pair | entry_price | exit_price | amount | pnl | profit
-| ------ | ------ | ------ | ------ | ------ | ------ |
-| Bitcoin | 17,252.28  | 18,252.28 | 1 | 1% | true
-| Ethereum | 1,527.88  | 1,327.88 | 2 | -1% | false
+| pair | buy_price | sell_price | qty | position | pnl | profit
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| Bitcoin | 17,252.28  | 18,252.28 | 1 | LONG| 1% | true
+| Ethereum | 1,527.88  | 1,327.88 | 2 | LONG | -1% | false
 
+```js
+position = position == LONG ? 1 : -1;
+```
+
+```ssh
+PNL: ((Exit Price - Entry Price) * Qty) * position
+```
