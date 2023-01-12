@@ -79,3 +79,6 @@ position = position == LONG ? 1 : -1;
 ```js
 PNLUSDT: ((Exit Price - Entry Price) * Qty) * position 
 ```
+```txt
+https://www.binance.com/en/futures/BTCUSDT/calculator
+```
