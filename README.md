@@ -37,7 +37,7 @@ Aşağıdaki form yapısında ise  **İkinci DB** üzerinde istediğimiz fieldla
 - Market Symbol
 - Position LONG || SHORT <- bu field formda yer almasın !!! (açıklama için)
 
-| pair | market_symbol | positon | price | action |
+| pair | market_symbol | Positon | price | action |
 | ------ | ------ | ------ | ------ | ------ |
 | Bitcoin | BTCUSDT  | LONG | 17,252.28 | LONG veya SHORT (position varsa CLOSE) |
 | Ethereum | ETHUSDT  | LONG| 1,327.88 | LONG veya SHORT (position varsa CLOSE) |
@@ -82,4 +82,7 @@ PNLUSDT: ((Exit Price - Entry Price) * Qty) * position
 ```
 ```txt
 https://www.binance.com/en/futures/BTCUSDT/calculator
+```
+```txt
+https://github.com/ccxt/ccxt
 ```
