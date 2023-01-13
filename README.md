@@ -35,7 +35,7 @@ Aşağıdaki form yapısında ise  **İkinci DB** üzerinde istediğimiz fieldla
 
 - Pair
 - Market Symbol
-- Position LONG || SHORT
+- Position LONG || SHORT <- bu field formda yer almasın !!! (açıklama için)
 
 | pair | market_symbol | positon | price | action |
 | ------ | ------ | ------ | ------ | ------ |
