@@ -39,8 +39,8 @@ Aşağıdaki form yapısında ise  **İkinci DB** üzerinde istediğimiz fieldla
 
 | pair | market_symbol | positon | price | action |
 | ------ | ------ | ------ | ------ | ------ |
-| Bitcoin | BTCUSDT  | LONG | 17,252.28 | LONG || SHORT (position varsa CLOSE) |
-| Ethereum | ETHUSDT  | LONG| 1,327.88 | LONG || SHORT (position varsa CLOSE) |
+| Bitcoin | BTCUSDT  | LONG | 17,252.28 | LONG veya SHORT (position varsa CLOSE) |
+| Ethereum | ETHUSDT  | LONG| 1,327.88 | LONG veya SHORT (position varsa CLOSE) |
 
 
 !Lütfen örnekteki coinleri yükleyiniz.
