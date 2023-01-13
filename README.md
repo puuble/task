@@ -9,13 +9,13 @@
 **Birinci DB**
 
 ```ssh 
-mongodb+srv://nodejs:nodejsdatapass@db1.ewt09.mongodb.net/?retryWrites=true&w=majority
+mongodb+srv://<username>:<password>@db1.rfnhl.mongodb.net/
 ```
 
 **İkinci DB**
 
 ```ssh 
-mongodb+srv://nodejs:nodejsdatapass@db2.ewt09.mongodb.net/?retryWrites=true&w=majority
+mongodb+srv://<username>:<password>@db2.rfnhl.mongodb.net/
 ```
 
 Projede gerekli sayfalar:
@@ -83,6 +83,7 @@ PNLUSDT: ((Exit Price - Entry Price) * Qty) * position
 ```txt
 https://www.binance.com/en/futures/BTCUSDT/calculator
 ```
+Aşağıdaki 3rd party multiple market destekli API provider ı binance offical yerine kullanabilirsiniz. Burada 100 den fazla markete bağlanmanızı sağlayan bir alt yapı mevcut. Python Nodejs gibi bir çok dilde example var daha kolay olabilir. Genelde bu kullanılıyor!!!
 ```txt
 https://github.com/ccxt/ccxt
 ```
